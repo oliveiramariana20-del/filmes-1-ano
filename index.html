@@ -1,1 +1,387 @@
-cabelos 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Care Studio - Cuidados Especiais para Seus Cabelos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .soft-red-bg {
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 50%, #fecaca 100%);
+        }
+        
+        .elegant-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .script-font {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .serif-font {
+            font-family: 'Crimson Text', serif;
+        }
+        
+        .card-hover {
+            transition: all 0.4s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(239, 68, 68, 0.25);
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(239, 68, 68, 0.1);
+        }
+        
+        .custom-border {
+            border: 2px solid rgba(239, 68, 68, 0.2);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #dc2626, #ef4444, #f87171);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="soft-red-bg min-h-screen">
+    <!-- Header -->
+    <header class="bg-white/70 backdrop-blur-md shadow-lg sticky top-0 z-50 custom-border border-t-0 border-l-0 border-r-0">
+        <nav class="container mx-auto px-6 py-5">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-red-200 to-red-300 rounded-full flex items-center justify-center floating">
+                        <span class="text-3xl">💇‍♀️</span>
+                    </div>
+                    <h1 class="text-3xl font-bold text-red-700 elegant-font text-shadow">Hair Care Studio</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-red-600 hover:text-red-800 transition-colors serif-font text-lg font-semibold">Início</a>
+                    <a href="#cuidados" class="text-red-600 hover:text-red-800 transition-colors serif-font text-lg font-semibold">Cuidados</a>
+                    <a href="#tratamentos" class="text-red-600 hover:text-red-800 transition-colors serif-font text-lg font-semibold">Tratamentos</a>
+                    <a href="#dicas" class="text-red-600 hover:text-red-800 transition-colors serif-font text-lg font-semibold">Dicas</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-24 px-6">
+        <div class="container mx-auto text-center fade-in">
+            <div class="mb-10 floating">
+                <span class="text-7xl">✨</span>
+                <span class="text-7xl mx-6">💆‍♀️</span>
+                <span class="text-7xl">🌸</span>
+            </div>
+            <h2 class="text-6xl font-bold text-red-800 mb-8 elegant-font text-shadow">
+                Cuidados <span class="script-font gradient-text">Especiais</span>
+            </h2>
+            <h3 class="text-3xl text-red-700 mb-8 script-font">para seus cabelos</h3>
+            <p class="text-xl text-red-600 mb-10 max-w-3xl mx-auto serif-font leading-relaxed">
+                Descubra os segredos de profissionais para manter seus cabelos sempre saudáveis, brilhantes e deslumbrantes
+            </p>
+            <button onclick="scrollToSection('cuidados')" class="bg-red-400 hover:bg-red-500 text-white px-10 py-5 rounded-full text-xl font-semibold transition-all shadow-lg hover:shadow-xl elegant-font">
+                Descobrir Cuidados
+            </button>
+        </div>
+    </section>
+
+    <!-- Tipos de Cabelo -->
+    <section id="cuidados" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h3 class="text-5xl font-bold text-center text-red-800 mb-16 elegant-font text-shadow">Cuidados por Tipo de Cabelo</h3>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Cabelo Oleoso -->
+                <div class="bg-white/80 rounded-3xl p-8 shadow-xl card-hover custom-border">
+                    <div class="bg-gradient-to-br from-red-100 to-red-200 w-20 h-20 rounded-full flex items-center justify-center mb-8 mx-auto">
+                        <span class="text-4xl">🧴</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-red-700 mb-6 text-center elegant-font">Cabelo Oleoso</h4>
+                    <ul class="space-y-4 text-red-600 serif-font text-lg">
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-4 text-xl">•</span>
+                            <span>Lave diariamente com shampoo específico</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-4 text-xl">•</span>
+                            <span>Use água morna, nunca quente</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-4 text-xl">•</span>
+                            <span>Evite condicionador na raiz</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-4 text-xl">•</span>
+                            <span>Faça esfoliação do couro cabeludo</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cabelo Seco -->
+                <div class="bg-white/80 rounded-3xl p-8 shadow-xl card-hover custom-border">
+                    <div class="bg-gradient-to-br from-red-100 to-red-200 w-20 h-20 rounded-full flex items-center justify-center mb-8 mx-auto">
+                        <span class="text-4xl">💧</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-red-700 mb-6 text-center elegant-font">Cabelo Seco</h4>
+                    <ul class="space-y-4 text-red-600 serif-font text-lg">
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-4 text-xl">•</span>
+                            <span>Hidrate profundamente 2x por semana</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-4 text-xl">•</span>
+                            <span>Use óleos naturais nas pontas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-4 text-xl">•</span>
+                            <span>Evite ferramentas de calor</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-4 text-xl">•</span>
+                            <span>Durma em fronha de seda</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cabelo Misto -->
+                <div class="bg-white/80 rounded-3xl p-8 shadow-xl card-hover custom-border">
+                    <div class="bg-gradient-to-br from-red-100 to-red-200 w-20 h-20 rounded-full flex items-center justify-center mb-8 mx-auto">
+                        <span class="text-4xl">⚖️</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-red-700 mb-6 text-center elegant-font">Cabelo Misto</h4>
+                    <ul class="space-y-4 text-red-600 serif-font text-lg">
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-4 text-xl">•</span>
+                            <span>Shampoo na raiz, condicionador no comprimento</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-4 text-xl">•</span>
+                            <span>Máscaras hidratantes nas pontas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-4 text-xl">•</span>
+                            <span>Shampoo seco entre lavagens</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-4 text-xl">•</span>
+                            <span>Corte regular para remover pontas secas</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tratamentos Especiais -->
+    <section id="tratamentos" class="py-20 px-6 bg-white/30">
+        <div class="container mx-auto">
+            <h3 class="text-5xl font-bold text-center text-red-800 mb-16 elegant-font text-shadow">Tratamentos Especiais</h3>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white/90 rounded-3xl p-10 shadow-2xl card-hover">
+                    <div class="text-center mb-8">
+                        <span class="text-6xl floating">🌿</span>
+                        <h4 class="text-3xl font-bold text-red-700 mt-4 elegant-font">Tratamentos Naturais</h4>
+                    </div>
+                    <div class="space-y-6 serif-font text-lg text-red-600">
+                        <div class="bg-red-50 p-6 rounded-2xl">
+                            <h5 class="font-bold text-red-800 mb-3 elegant-font text-xl">Máscara de Abacate</h5>
+                            <p>Hidratação profunda para cabelos ressecados</p>
+                        </div>
+                        <div class="bg-red-50 p-6 rounded-2xl">
+                            <h5 class="font-bold text-red-800 mb-3 elegant-font text-xl">Óleo de Coco</h5>
+                            <p>Nutrição e brilho natural intenso</p>
+                        </div>
+                        <div class="bg-red-50 p-6 rounded-2xl">
+                            <h5 class="font-bold text-red-800 mb-3 elegant-font text-xl">Vinagre de Maçã</h5>
+                            <p>Equilibra o pH e remove resíduos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/90 rounded-3xl p-10 shadow-2xl card-hover">
+                    <div class="text-center mb-8">
+                        <span class="text-6xl floating">💎</span>
+                        <h4 class="text-3xl font-bold text-red-700 mt-4 elegant-font">Tratamentos Profissionais</h4>
+                    </div>
+                    <div class="space-y-6 serif-font text-lg text-red-600">
+                        <div class="bg-red-50 p-6 rounded-2xl">
+                            <h5 class="font-bold text-red-800 mb-3 elegant-font text-xl">Botox Capilar</h5>
+                            <p>Reconstrução e alisamento natural</p>
+                        </div>
+                        <div class="bg-red-50 p-6 rounded-2xl">
+                            <h5 class="font-bold text-red-800 mb-3 elegant-font text-xl">Cauterização</h5>
+                            <p>Selagem das cutículas danificadas</p>
+                        </div>
+                        <div class="bg-red-50 p-6 rounded-2xl">
+                            <h5 class="font-bold text-red-800 mb-3 elegant-font text-xl">Cronograma Capilar</h5>
+                            <p>Rotina personalizada de cuidados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dicas Diárias -->
+    <section id="dicas" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h3 class="text-5xl font-bold text-center text-red-800 mb-16 elegant-font text-shadow">Dicas para o Dia a Dia</h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white/80 p-8 rounded-2xl shadow-lg text-center card-hover custom-border">
+                    <span class="text-5xl mb-6 block floating">🌡️</span>
+                    <h5 class="font-bold text-red-800 mb-4 elegant-font text-xl">Temperatura Ideal</h5>
+                    <p class="text-red-600 serif-font">Água morna para lavar, fria para o último enxágue</p>
+                </div>
+                
+                <div class="bg-white/80 p-8 rounded-2xl shadow-lg text-center card-hover custom-border">
+                    <span class="text-5xl mb-6 block floating">🧖‍♀️</span>
+                    <h5 class="font-bold text-red-800 mb-4 elegant-font text-xl">Massagem no Couro</h5>
+                    <p class="text-red-600 serif-font">Estimula a circulação e o crescimento</p>
+                </div>
+                
+                <div class="bg-white/80 p-8 rounded-2xl shadow-lg text-center card-hover custom-border">
+                    <span class="text-5xl mb-6 block floating">✂️</span>
+                    <h5 class="font-bold text-red-800 mb-4 elegant-font text-xl">Corte Regular</h5>
+                    <p class="text-red-600 serif-font">A cada 2-3 meses para manter a saúde</p>
+                </div>
+                
+                <div class="bg-white/80 p-8 rounded-2xl shadow-lg text-center card-hover custom-border">
+                    <span class="text-5xl mb-6 block floating">🛡️</span>
+                    <h5 class="font-bold text-red-800 mb-4 elegant-font text-xl">Proteção Térmica</h5>
+                    <p class="text-red-600 serif-font">Sempre antes de usar ferramentas de calor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cronograma Semanal -->
+    <section class="py-20 px-6 bg-white/30">
+        <div class="container mx-auto">
+            <h3 class="text-5xl font-bold text-center text-red-800 mb-16 elegant-font text-shadow">Cronograma Semanal de Cuidados</h3>
+            
+            <div class="bg-white/90 rounded-3xl p-10 shadow-2xl max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-7 gap-6">
+                    <div class="text-center p-6 bg-red-50 rounded-2xl card-hover">
+                        <h6 class="font-bold text-red-700 mb-4 elegant-font text-lg">Domingo</h6>
+                        <span class="text-4xl mb-4 block">🛁</span>
+                        <p class="text-sm text-red-600 serif-font">Hidratação Profunda</p>
+                    </div>
+                    <div class="text-center p-6 bg-red-50 rounded-2xl card-hover">
+                        <h6 class="font-bold text-red-700 mb-4 elegant-font text-lg">Segunda</h6>
+                        <span class="text-4xl mb-4 block">😴</span>
+                        <p class="text-sm text-red-600 serif-font">Descanso Total</p>
+                    </div>
+                    <div class="text-center p-6 bg-red-50 rounded-2xl card-hover">
+                        <h6 class="font-bold text-red-700 mb-4 elegant-font text-lg">Terça</h6>
+                        <span class="text-4xl mb-4 block">🧴</span>
+                        <p class="text-sm text-red-600 serif-font">Lavagem Suave</p>
+                    </div>
+                    <div class="text-center p-6 bg-red-50 rounded-2xl card-hover">
+                        <h6 class="font-bold text-red-700 mb-4 elegant-font text-lg">Quarta</h6>
+                        <span class="text-4xl mb-4 block">🔧</span>
+                        <p class="text-sm text-red-600 serif-font">Reconstrução</p>
+                    </div>
+                    <div class="text-center p-6 bg-red-50 rounded-2xl card-hover">
+                        <h6 class="font-bold text-red-700 mb-4 elegant-font text-lg">Quinta</h6>
+                        <span class="text-4xl mb-4 block">💧</span>
+                        <p class="text-sm text-red-600 serif-font">Hidratação Leve</p>
+                    </div>
+                    <div class="text-center p-6 bg-red-50 rounded-2xl card-hover">
+                        <h6 class="font-bold text-red-700 mb-4 elegant-font text-lg">Sexta</h6>
+                        <span class="text-4xl mb-4 block">✨</span>
+                        <p class="text-sm text-red-600 serif-font">Nutrição</p>
+                    </div>
+                    <div class="text-center p-6 bg-red-50 rounded-2xl card-hover">
+                        <h6 class="font-bold text-red-700 mb-4 elegant-font text-lg">Sábado</h6>
+                        <span class="text-4xl mb-4 block">🌿</span>
+                        <p class="text-sm text-red-600 serif-font">Tratamento Natural</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-red-900 text-red-100 py-16 px-6">
+        <div class="container mx-auto text-center">
+            <div class="mb-8 floating">
+                <span class="text-4xl">💇‍♀️</span>
+                <span class="text-4xl mx-6">✨</span>
+                <span class="text-4xl">🌸</span>
+            </div>
+            <h4 class="text-3xl font-bold mb-6 elegant-font">Hair Care Studio</h4>
+            <p class="text-red-300 mb-8 serif-font text-lg">Cuidados especializados para todos os tipos de cabelo</p>
+            <div class="script-font text-2xl text-red-200 mb-6">
+                "Seus cabelos merecem o melhor cuidado"
+            </div>
+            <p class="text-sm text-red-400 serif-font">© 2024 Hair Care Studio - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Animação de entrada para elementos
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observar todas as seções
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Efeito parallax suave no scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.floating');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a5b81e6531c20f',t:'MTc1OTc1OTU4NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
